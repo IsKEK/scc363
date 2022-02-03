@@ -24,7 +24,7 @@ if __name__ == "__main__":
     key = os.urandom(32)
     plainText = "some test string"
     cipherText, iv = encrypt(key, plainText)
-    print("cipher text is: " + cipherText)
+    print(cipherText)
     newPlainText = decrypt(key, cipherText, iv)
     print(newPlainText)
 """
