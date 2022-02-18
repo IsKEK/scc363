@@ -5,11 +5,10 @@ def buildTable(a, b):
 
     cipherTable = {}
     sizeOfAlphabet = len(string.ascii_uppercase)
-
+    
     for i in range(sizeOfAlphabet):
-
-        plainChar = string.ascii_uppercase[i]
-        cipherChar= string.ascii_uppercase[(a*i+b)%sizeOfAlphabet]
+        plainChar = string.ascii_uppercase[i] 
+        cipherChar= string.ascii_uppercase[(a*i+b)%sizeOfAlphabet] # apply the affine cipher formula to map each letter in the alphabet
 
         cipherTable[plainChar] = cipherChar
     
@@ -19,10 +18,10 @@ def encryptAffine(plainText, a, b):
     cipherTable = buildTable(a, b)
     cipherText = ""
     for char in plainText:
-        if char in cipherTable:
+        if char in cipherTable: 
             cipherText += cipherTable[char]
         else:
-            cipherText += char
+            cipherText += char  # leave characters that are not in the alphabet unchanged
     return cipherText
 
 if __name__ == "__main__":
