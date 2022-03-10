@@ -5,7 +5,7 @@ from cryptography.hazmat.backends import default_backend
 
 def xorMessages(message1, message2):
     # xor every byte of message 1 with message 2
-    # the byte strings doesn't have to be the same size because zip functions zips to whatever byte string is the shortest
+    # the byte strings don't have to be the same size because zip function zips to whatever byte string is the shortest
     return bytes([a ^ b for a, b in zip(message1, message2)])
 
 def findCiphertext(): 

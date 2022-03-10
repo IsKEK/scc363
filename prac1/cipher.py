@@ -1,6 +1,5 @@
 # Include any required modules
 from pydoc import plain
-import cryptography
 
 def buildTables(rotationNumber):
     # The function should return 2 dictionaries.

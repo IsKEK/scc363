@@ -8,7 +8,7 @@ def ParetoDistribution(alpha, xm, x):
     else:
         mean = MAX
     if alpha > 2:
-        # variance = ((xm/alpha-1)**2)*(alpha/alpha-2) 
+        # variance = (xm**2/(alpha-1)**2)*(alpha/alpha-2) 
         variance = xm**2*alpha/((alpha-1)**2*(alpha-2))
     elif alpha in range(1, 2):
         variance = MAX
@@ -19,7 +19,7 @@ def ParetoDistribution(alpha, xm, x):
         prob = 1 - probLessThan
         # prob = prob * 100
     else:
-        prob = 100
+        prob = 1
     return (mean, variance, prob)
 
 if __name__ == "__main__":

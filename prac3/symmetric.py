@@ -5,6 +5,7 @@ from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 def encrypt(key, plainText):
 # Generate an initialisation vector
     iv = os.urandom(16)
+    print(iv)
 # Construct an AES-CTR Cipher object with the given key and randomly generated initialisation vector
     cipher = Cipher(algorithms.AES(key), modes.CTR(iv))
     encryptor = cipher.encryptor()

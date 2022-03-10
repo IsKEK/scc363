@@ -18,10 +18,10 @@ def encryptAffine(plainText, a, b):
     cipherTable = buildTable(a, b)
     cipherText = ""
     for char in plainText:
-        if char in cipherTable: 
-            cipherText += cipherTable[char]
+        if char in cipherTable:  
+            cipherText += cipherTable[char] # switch characters that are in the table to its' mapped values
         else:
-            cipherText += char  # leave characters that are not in the alphabet unchanged
+            cipherText += char  # leave characters that are not in the table unchanged
     return cipherText
 
 if __name__ == "__main__":
